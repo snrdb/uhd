@@ -67,7 +67,7 @@ module rx_frontend
       else
 	begin
             assign i_out = {adc_i, 8'b0};
-            assign q_out = {adc-q, 8'b0};
+            assign q_out = {adc_q, 8'b0};
             /*
 	   rx_dcoffset #(.WIDTH(24),.ADDR(BASE+3)) rx_dcoffset_i
 	     (.clk(clk),.rst(rst),.set_stb(set_stb),.set_addr(set_addr),.set_data(set_data),
