@@ -1,0 +1,6 @@
+##################################################
+# Custom RX for use with the Basic RX front-end.
+##################################################
+CUSTOM_SRCS = $(abspath $(addprefix $(BASE_DIR)/../basic_rx_custom/, \
+custom_dsp_rx.v \
+))

@@ -1,7 +1,8 @@
 
 module rx_frontend
   #(parameter BASE = 0,
-    parameter IQCOMP_EN = 1)
+    parameter IQCOMP_EN = 0,
+    parameter DCCOMP_EN = 0)
    (input clk, input rst,
     input set_stb, input [7:0] set_addr, input [31:0] set_data,
 
@@ -65,6 +66,9 @@ module rx_frontend
 	end // if (IQCOMP_EN == 1)
       else
 	begin
+            assign i_out = {adc_i, 8'b0};
+            assign q_out = {adc-q, 8'b0};
+            /*
 	   rx_dcoffset #(.WIDTH(24),.ADDR(BASE+3)) rx_dcoffset_i
 	     (.clk(clk),.rst(rst),.set_stb(set_stb),.set_addr(set_addr),.set_data(set_data),
 	      .in({adc_i,8'b00}),.out(i_out));
@@ -72,6 +76,7 @@ module rx_frontend
 	   rx_dcoffset #(.WIDTH(24),.ADDR(BASE+4)) rx_dcoffset_q
 	     (.clk(clk),.rst(rst),.set_stb(set_stb),.set_addr(set_addr),.set_data(set_data),
 	      .in({adc_q,8'b00}),.out(q_out));
+            */
 	end // else: !if(IQCOMP_EN == 1)
       endgenerate
    
