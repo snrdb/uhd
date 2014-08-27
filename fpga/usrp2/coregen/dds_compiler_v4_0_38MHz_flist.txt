@@ -1,0 +1,14 @@
+# Output products list for <dds_compiler_v4_0_38MHz>
+_xmsgs/pn_parser.xmsgs
+dds_compiler_v4_0_38MHz/doc/dds_compiler_v4_0_vinfo.html
+dds_compiler_v4_0_38MHz/doc/dds_ds558.pdf
+dds_compiler_v4_0_38MHz.asy
+dds_compiler_v4_0_38MHz.gise
+dds_compiler_v4_0_38MHz.ngc
+dds_compiler_v4_0_38MHz.v
+dds_compiler_v4_0_38MHz.veo
+dds_compiler_v4_0_38MHz.xco
+dds_compiler_v4_0_38MHz.xise
+dds_compiler_v4_0_38MHz_flist.txt
+dds_compiler_v4_0_38MHz_readme.txt
+dds_compiler_v4_0_38MHz_xmdf.tcl

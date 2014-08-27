@@ -6,6 +6,10 @@
 # Coregen Sources
 ##################################################
 COREGEN_SRCS = $(abspath $(addprefix $(BASE_DIR)/../coregen/, \
+dds_compiler_v4_0_38MHz.v \
+dds_compiler_v4_0_38MHz.xco \
+multiplier.v \
+multiplier.xco \
 fifo_xlnx_2Kx36_2clk.v \
 fifo_xlnx_2Kx36_2clk.xco \
 fifo_xlnx_512x36_2clk.v \

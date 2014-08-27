@@ -9,8 +9,8 @@ TOP_MODULE = u2plus
 BUILD_DIR = $(abspath build$(ISE)-N210R4)
 
 # set me in a custom makefile
-CUSTOM_SRCS =
-CUSTOM_DEFS =
+CUSTOM_SRCS = $(BASE_DIR)/../basic_rx_custom/custom_dsp_rx.v
+CUSTOM_DEFS = RX_DSP0_MODULE=custom_dsp_rx RX_DSP1_MODULE=custom_dsp_rx
 
 ##################################################
 # Include other makefiles

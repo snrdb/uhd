@@ -63,30 +63,34 @@ module custom_dsp_rx
 );
 
 	wire [7:0] cosine;
+	wire [7:0] sine;
 	wire [32:0] antialiased;
 	wire [23:0] if_5MHz;
-	dds_compiler_v4_0 cos_35MHz (
-	.clk(clock), // input clk
-	.cosine(cosine), // output [7 : 0] cosine
-	.sine()); // output [7 : 0] sine
-
-fir_compiler_v5_0 antialias_filter (
-        .clk(clock), // input clk
-        .rfd(), // output rfd
-        .rdy(), // output rdy
-        .din(frontend_q[23:8]), // input [15 : 0] din
-        .dout(antialiased)); // output [32 : 0] dout
 
 
-	multiplier if_mult (
+    dds_compiler_v4_0_38MHz quad_mixer (
+        .clk(clk), // input clk
+        .cosine(cosine), // output [7 : 0] cosine
+        .sine(sine) // output [7 : 0] sine
+    );
+
+    multiplier if_mult_i (
  	.clk(clock), // input clk
   	.a(cosine), // input [7 : 0] a
-  	.b(antialiased[32:17]), // input [15 : 0] b
-  	.p(if_5MHz) // output [23 : 0] p
-);
+  	.b(frontend_i[23:10]), // input [15 : 0] b
+  	.p(if_i) // output [23 : 0] p
+    );
 
-	assign ddc_in_q = if_5MHz;
-	assign ddc_in_i = if_5MHz;
+
+    multiplier if_mult_q (
+ 	.clk(clock), // input clk
+  	.a(sine), // input [7 : 0] a
+  	.b(frontend_i[23:10]), // input [15 : 0] b
+  	.p(if_q) // output [23 : 0] p
+    );
+
+	assign ddc_in_q = if_i;
+	assign ddc_in_i = if_q;
 //	assign ddc_in_i = {signal_6MHz, 10'b0};
 //    assign ddc_in_i = frontend_i;
 //    assign ddc_in_q = frontend_q;
