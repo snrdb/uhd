@@ -1,7 +1,7 @@
 ##############################################################
 #
-# Xilinx Core Generator version K.39
-# Date: Fri Sep 11 04:33:27 2009
+# Xilinx Core Generator version 14.6
+# Date: Thu Aug 28 11:18:25 2014
 #
 ##############################################################
 #
@@ -12,24 +12,28 @@
 #
 ##############################################################
 #
+#  Generated from component: xilinx.com:ip:fifo_generator:4.3
+#
+##############################################################
+#
 # BEGIN Project Options
-SET addpads = False
-SET asysymbol = False
+SET addpads = false
+SET asysymbol = true
 SET busformat = BusFormatAngleBracketNotRipped
-SET createndf = False
+SET createndf = false
 SET designentry = Verilog
-SET device = xc3s2000
-SET devicefamily = spartan3
+SET device = xc3sd3400a
+SET devicefamily = spartan3adsp
 SET flowvendor = Other
-SET formalverification = False
-SET foundationsym = False
+SET formalverification = false
+SET foundationsym = false
 SET implementationfiletype = Ngc
-SET package = fg456
-SET removerpms = False
+SET package = fg676
+SET removerpms = false
 SET simulationfiles = Behavioral
 SET speedgrade = -5
-SET verilogsim = True
-SET vhdlsim = False
+SET verilogsim = true
+SET vhdlsim = false
 # END Project Options
 # BEGIN Select
 SELECT Fifo_Generator family Xilinx,_Inc. 4.3
@@ -77,6 +81,8 @@ CSET write_clock_frequency=1
 CSET write_data_count=true
 CSET write_data_count_width=5
 # END Parameters
+# BEGIN Extra information
+MISC pkg_timestamp=2013-06-08T23:00:50Z
+# END Extra information
 GENERATE
-# CRC: 60b85dda
-
+# CRC: b29fc71a

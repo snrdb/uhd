@@ -14,7 +14,7 @@ namespace eval ::fifo_xlnx_64x36_2clk_xmdf {
 # Optional when the use context does not require the param or ports
 # arrays to be available.
 proc ::fifo_xlnx_64x36_2clk_xmdf::xmdfInit { instance } {
-# Variable containg name of library into which module is compiled
+# Variable containing name of library into which module is compiled
 # Recommendation: <module_name>
 # Required
 utilities_xmdf::xmdfSetData $instance Module Attributes Name fifo_xlnx_64x36_2clk
@@ -30,10 +30,17 @@ set fcount 0
 # Examples include unisim and xilinxcorelib
 # Optional
 # In this example, we assume that the unisim library will
-# be magically
-# available to the simulation and synthesis tool
+# be available to the simulation and synthesis tool
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type logical_library
 utilities_xmdf::xmdfSetData $instance FileSet $fcount logical_library unisim
+incr fcount
+
+utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_generator_ug175.pdf
+utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
+incr fcount
+
+utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_xlnx_64x36_2clk.asy
+utilities_xmdf::xmdfSetData $instance FileSet $fcount type asy
 incr fcount
 
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_xlnx_64x36_2clk.ngc
@@ -50,10 +57,6 @@ incr fcount
 
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_xlnx_64x36_2clk.xco
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type coregen_ip
-incr fcount
-
-utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_xlnx_64x36_2clk_fifo_generator_v4_3_xst_1.ngc_xst.xrpt
-utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
 incr fcount
 
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path fifo_xlnx_64x36_2clk_xmdf.tcl

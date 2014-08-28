@@ -1,38 +1,51 @@
-The following files were generated for 'fifo_xlnx_16x19_2clk' in directory 
-/home/matt/gnuradio.git/usrp2/fpga/coregen/:
+The following files were generated for 'fifo_xlnx_16x19_2clk' in directory
+/home/dan/uhd/fpga/usrp2/coregen/
 
-fifo_xlnx_16x19_2clk.ngc:
-   Binary Xilinx implementation netlist file containing the information
-   required to implement the module in a Xilinx (R) FPGA.
+XCO file generator:
+   Generate an XCO file for compatibility with legacy flows.
 
-fifo_xlnx_16x19_2clk.v:
-   Verilog wrapper file provided to support functional simulation.
-   This file contains simulation model customization data that is
-   passed to a parameterized simulation model for the core.
+   * fifo_xlnx_16x19_2clk.xco
 
-fifo_xlnx_16x19_2clk.veo:
-   VEO template file containing code that can be used as a model for
-   instantiating a CORE Generator module in a Verilog design.
+Creates an implementation netlist:
+   Creates an implementation netlist for the IP.
 
-fifo_xlnx_16x19_2clk.xco:
-   CORE Generator input file containing the parameters used to
-   regenerate a core.
+   * fifo_generator_ug175.pdf
+   * fifo_xlnx_16x19_2clk.ngc
+   * fifo_xlnx_16x19_2clk.v
+   * fifo_xlnx_16x19_2clk.veo
 
-fifo_xlnx_16x19_2clk_fifo_generator_v4_3_xst_1.ngc_xst.xrpt:
-   Please see the core data sheet.
+Creates an HDL instantiation template:
+   Creates an HDL instantiation template for the IP.
 
-fifo_xlnx_16x19_2clk_flist.txt:
-   Text file listing all of the output files produced when a customized
-   core was generated in the CORE Generator.
+   * fifo_xlnx_16x19_2clk.veo
 
-fifo_xlnx_16x19_2clk_readme.txt:
-   Text file indicating the files generated and how they are used.
+IP Symbol Generator:
+   Generate an IP symbol based on the current project options'.
 
-fifo_xlnx_16x19_2clk_xmdf.tcl:
-   ISE Project Navigator interface file. ISE uses this file to determine
-   how the files output by CORE Generator for the core can be integrated
-   into your ISE project.
+   * fifo_xlnx_16x19_2clk.asy
 
+Generate ISE metadata:
+   Create a metadata file for use when including this core in ISE designs
+
+   * fifo_xlnx_16x19_2clk_xmdf.tcl
+
+Generate ISE subproject:
+   Create an ISE subproject for use when including this core in ISE designs
+
+   * _xmsgs/pn_parser.xmsgs
+   * fifo_xlnx_16x19_2clk.gise
+   * fifo_xlnx_16x19_2clk.xise
+
+Deliver Readme:
+   Readme file for the IP.
+
+   * fifo_xlnx_16x19_2clk_readme.txt
+
+Generate FLIST file:
+   Text file listing all of the output files produced when a customized core was
+   generated in the CORE Generator.
+
+   * fifo_xlnx_16x19_2clk_flist.txt
 
 Please see the Xilinx CORE Generator online help for further details on
 generated files and how to use them.

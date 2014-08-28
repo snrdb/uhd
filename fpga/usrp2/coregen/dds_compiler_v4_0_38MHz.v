@@ -7,7 +7,7 @@
 // \   \   \/     Version: P.68d
 //  \   \         Application: netgen
 //  /   /         Filename: dds_compiler_v4_0_38MHz.v
-// /___/   /\     Timestamp: Wed Aug 27 21:39:13 2014
+// /___/   /\     Timestamp: Thu Aug 28 20:41:33 2014
 // \   \  /  \ 
 //  \___\/\___\
 //             

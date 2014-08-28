@@ -1,10 +1,5 @@
 The following files were generated for 'dds_compiler_v4_0' in directory
-/home/sdr/ettus/uhd/fpga/usrp2/coregen/
-
-ISE file generator:
-   Add description here...
-
-   * dds_compiler_v4_0_flist.txt
+/home/dan/uhd/fpga/usrp2/coregen/
 
 Generate XCO file:
    CORE Generator input file containing the parameters used to generate a core.

@@ -4,3 +4,5 @@
 CUSTOM_SRCS = $(abspath $(addprefix $(BASE_DIR)/../basic_rx_custom/, \
 custom_dsp_rx.v \
 ))
+
+CUSTOM_DEFS = RX_DSP0_MODULE=custom_dsp_rx RX_DSP1_MODULE=custom_dsp_rx

@@ -1,6 +1,7 @@
 # Output products list for <fifo_xlnx_512x36_2clk_prog_full>
 _xmsgs/pn_parser.xmsgs
 fifo_generator_ug175.pdf
+fifo_xlnx_512x36_2clk_prog_full.asy
 fifo_xlnx_512x36_2clk_prog_full.gise
 fifo_xlnx_512x36_2clk_prog_full.ngc
 fifo_xlnx_512x36_2clk_prog_full.v

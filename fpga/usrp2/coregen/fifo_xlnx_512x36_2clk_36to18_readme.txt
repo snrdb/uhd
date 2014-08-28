@@ -1,46 +1,52 @@
-The following files were generated for 'fifo_xlnx_512x36_2clk_36to18' in directory 
-/home/ianb/ettus/sram_fifo/fpgapriv/usrp2/coregen/
+The following files were generated for 'fifo_xlnx_512x36_2clk_36to18' in
+directory
+/home/dan/uhd/fpga/usrp2/coregen/
 
-fifo_generator_ug175.pdf:
-   Please see the core data sheet.
+XCO file generator:
+   Generate an XCO file for compatibility with legacy flows.
 
-fifo_xlnx_512x36_2clk_36to18.gise:
-   ISE Project Navigator support file. This is a generated file and should
-   not be edited directly.
+   * fifo_xlnx_512x36_2clk_36to18.xco
 
-fifo_xlnx_512x36_2clk_36to18.ngc:
-   Binary Xilinx implementation netlist file containing the information
-   required to implement the module in a Xilinx (R) FPGA.
+Creates an implementation netlist:
+   Creates an implementation netlist for the IP.
 
-fifo_xlnx_512x36_2clk_36to18.v:
-   Verilog wrapper file provided to support functional simulation.
-   This file contains simulation model customization data that is
-   passed to a parameterized simulation model for the core.
+   * fifo_generator_ug175.pdf
+   * fifo_xlnx_512x36_2clk_36to18.ngc
+   * fifo_xlnx_512x36_2clk_36to18.v
+   * fifo_xlnx_512x36_2clk_36to18.veo
 
-fifo_xlnx_512x36_2clk_36to18.veo:
-   VEO template file containing code that can be used as a model for
-   instantiating a CORE Generator module in a Verilog design.
+Creates an HDL instantiation template:
+   Creates an HDL instantiation template for the IP.
 
-fifo_xlnx_512x36_2clk_36to18.xco:
-   CORE Generator input file containing the parameters used to
-   regenerate a core.
+   * fifo_xlnx_512x36_2clk_36to18.veo
 
-fifo_xlnx_512x36_2clk_36to18.xise:
-   ISE Project Navigator support file. This is a generated file and should
-   not be edited directly.
+IP Symbol Generator:
+   Generate an IP symbol based on the current project options'.
 
-fifo_xlnx_512x36_2clk_36to18_readme.txt:
-   Text file indicating the files generated and how they are used.
+   * fifo_xlnx_512x36_2clk_36to18.asy
 
-fifo_xlnx_512x36_2clk_36to18_xmdf.tcl:
-   ISE Project Navigator interface file. ISE uses this file to determine
-   how the files output by CORE Generator for the core can be integrated
-   into your ISE project.
+Generate ISE metadata:
+   Create a metadata file for use when including this core in ISE designs
 
-fifo_xlnx_512x36_2clk_36to18_flist.txt:
-   Text file listing all of the output files produced when a customized
-   core was generated in the CORE Generator.
+   * fifo_xlnx_512x36_2clk_36to18_xmdf.tcl
 
+Generate ISE subproject:
+   Create an ISE subproject for use when including this core in ISE designs
+
+   * _xmsgs/pn_parser.xmsgs
+   * fifo_xlnx_512x36_2clk_36to18.gise
+   * fifo_xlnx_512x36_2clk_36to18.xise
+
+Deliver Readme:
+   Readme file for the IP.
+
+   * fifo_xlnx_512x36_2clk_36to18_readme.txt
+
+Generate FLIST file:
+   Text file listing all of the output files produced when a customized core was
+   generated in the CORE Generator.
+
+   * fifo_xlnx_512x36_2clk_36to18_flist.txt
 
 Please see the Xilinx CORE Generator online help for further details on
 generated files and how to use them.

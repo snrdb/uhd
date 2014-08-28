@@ -9,8 +9,8 @@ TOP_MODULE = u2plus
 BUILD_DIR = $(abspath build$(ISE)-N210R4)
 
 # set me in a custom makefile
-CUSTOM_SRCS = $(BASE_DIR)/../basic_rx_custom/custom_dsp_rx.v
-CUSTOM_DEFS = RX_DSP0_MODULE=custom_dsp_rx RX_DSP1_MODULE=custom_dsp_rx
+CUSTOM_SRCS = 
+CUSTOM_DEFS = 
 
 ##################################################
 # Include other makefiles
@@ -28,6 +28,7 @@ include ../../vrt/Makefile.srcs
 include ../../udp/Makefile.srcs
 include ../../coregen/Makefile.srcs
 include ../../extramfifo/Makefile.srcs
+include ../../basic_rx_custom/Makefile.srcs
 
 
 ##################################################
@@ -57,7 +58,8 @@ u2plus.ucf
 SOURCES = $(abspath $(TOP_SRCS)) $(FIFO_SRCS) \
 $(CONTROL_LIB_SRCS) $(SDR_LIB_SRCS) $(SERDES_SRCS) \
 $(SIMPLE_GEMAC_SRCS) $(TIMING_SRCS) $(OPENCORES_SRCS) \
-$(VRT_SRCS) $(UDP_SRCS) $(COREGEN_SRCS) $(EXTRAM_SRCS)
+$(VRT_SRCS) $(UDP_SRCS) $(COREGEN_SRCS) $(EXTRAM_SRCS) \
+$(CUSTOM_SRCS)
 
 ##################################################
 # Process Properties

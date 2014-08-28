@@ -1,7 +1,7 @@
 ##############################################################
 #
-# Xilinx Core Generator version 12.1
-# Date: Fri May  4 20:46:48 2012
+# Xilinx Core Generator version 14.6
+# Date: Thu Aug 28 11:16:12 2014
 #
 ##############################################################
 #
@@ -12,22 +12,26 @@
 #
 ##############################################################
 #
+#  Generated from component: xilinx.com:ip:fifo_generator:6.1
+#
+##############################################################
+#
 # BEGIN Project Options
 SET addpads = false
 SET asysymbol = true
 SET busformat = BusFormatAngleBracketNotRipped
 SET createndf = false
 SET designentry = Verilog
-SET device = xc6slx75
-SET devicefamily = spartan6
+SET device = xc3sd3400a
+SET devicefamily = spartan3adsp
 SET flowvendor = Other
 SET formalverification = false
 SET foundationsym = false
 SET implementationfiletype = Ngc
-SET package = csg484
+SET package = fg676
 SET removerpms = false
 SET simulationfiles = Behavioral
-SET speedgrade = -3
+SET speedgrade = -5
 SET verilogsim = true
 SET vhdlsim = false
 # END Project Options
@@ -80,5 +84,8 @@ CSET write_clock_frequency=1
 CSET write_data_count=true
 CSET write_data_count_width=10
 # END Parameters
+# BEGIN Extra information
+MISC pkg_timestamp=2013-06-08T23:00:50Z
+# END Extra information
 GENERATE
-# CRC: a4cd75c3
+# CRC: bb2c2cd5

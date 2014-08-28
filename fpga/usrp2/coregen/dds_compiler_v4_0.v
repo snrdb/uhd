@@ -1,23 +1,23 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 ////////////////////////////////////////////////////////////////////////////////
 //   ____  ____
 //  /   /\/   /
 // /___/  \  /    Vendor: Xilinx
-// \   \   \/     Version: P.15xf
+// \   \   \/     Version: P.68d
 //  \   \         Application: netgen
 //  /   /         Filename: dds_compiler_v4_0.v
-// /___/   /\     Timestamp: Fri Sep 14 11:48:30 2012
+// /___/   /\     Timestamp: Thu Aug 28 20:39:44 2014
 // \   \  /  \ 
 //  \___\/\___\
 //             
-// Command	: -w -sim -ofmt verilog /home/sdr/ettus/uhd/fpga/usrp2/coregen/tmp/_cg/dds_compiler_v4_0.ngc /home/sdr/ettus/uhd/fpga/usrp2/coregen/tmp/_cg/dds_compiler_v4_0.v 
+// Command	: -w -sim -ofmt verilog /home/dan/uhd/fpga/usrp2/coregen/tmp/_cg/dds_compiler_v4_0.ngc /home/dan/uhd/fpga/usrp2/coregen/tmp/_cg/dds_compiler_v4_0.v 
 // Device	: 3sd3400afg676-5
-// Input file	: /home/sdr/ettus/uhd/fpga/usrp2/coregen/tmp/_cg/dds_compiler_v4_0.ngc
-// Output file	: /home/sdr/ettus/uhd/fpga/usrp2/coregen/tmp/_cg/dds_compiler_v4_0.v
+// Input file	: /home/dan/uhd/fpga/usrp2/coregen/tmp/_cg/dds_compiler_v4_0.ngc
+// Output file	: /home/dan/uhd/fpga/usrp2/coregen/tmp/_cg/dds_compiler_v4_0.v
 // # of Modules	: 1
 // Design Name	: dds_compiler_v4_0
-// Xilinx        : /opt/Xilinx/14.1/ISE_DS/ISE/
+// Xilinx        : /opt/Xilinx/14.6/ISE_DS/ISE/
 //             
 // Purpose:    
 //     This verilog netlist is a verification model and uses simulation 
@@ -34,279 +34,848 @@
 `timescale 1 ns/1 ps
 
 module dds_compiler_v4_0 (
-  clk, sine, cosine
+  clk, cosine, sine
 )/* synthesis syn_black_box syn_noprune=1 */;
   input clk;
-  output [7 : 0] sine;
   output [7 : 0] cosine;
+  output [7 : 0] sine;
   
   // synthesis translate_off
   
-  wire \blk00000003/sig0000004b ;
-  wire \blk00000003/sig0000004a ;
-  wire \blk00000003/sig00000049 ;
-  wire \blk00000003/sig00000048 ;
-  wire \blk00000003/sig00000047 ;
-  wire \blk00000003/sig00000046 ;
-  wire \blk00000003/sig00000045 ;
-  wire \blk00000003/sig00000044 ;
-  wire \blk00000003/sig00000043 ;
-  wire \blk00000003/sig00000042 ;
-  wire \blk00000003/sig00000041 ;
-  wire \blk00000003/sig00000040 ;
-  wire \blk00000003/sig0000003f ;
-  wire \blk00000003/sig0000003e ;
-  wire \blk00000003/sig0000003d ;
-  wire \blk00000003/sig0000003c ;
-  wire \blk00000003/sig0000003b ;
-  wire \blk00000003/sig0000003a ;
-  wire \blk00000003/sig00000039 ;
-  wire \blk00000003/sig00000038 ;
-  wire \blk00000003/sig00000037 ;
-  wire \blk00000003/sig00000036 ;
-  wire \blk00000003/sig00000035 ;
-  wire \blk00000003/sig00000034 ;
-  wire \blk00000003/sig00000033 ;
-  wire \blk00000003/sig00000032 ;
-  wire \blk00000003/sig00000031 ;
-  wire \blk00000003/sig00000030 ;
-  wire \blk00000003/sig0000002f ;
-  wire \blk00000003/sig0000002e ;
-  wire \blk00000003/sig0000002d ;
-  wire \blk00000003/sig0000002c ;
-  wire \blk00000003/sig0000002b ;
-  wire \blk00000003/sig0000002a ;
-  wire \blk00000003/sig00000029 ;
-  wire \blk00000003/sig00000028 ;
-  wire \blk00000003/sig00000027 ;
-  wire \blk00000003/sig00000026 ;
-  wire \blk00000003/sig00000025 ;
-  wire \blk00000003/sig00000024 ;
-  wire \blk00000003/sig00000023 ;
-  wire \blk00000003/sig00000022 ;
-  wire \blk00000003/sig00000021 ;
-  wire \blk00000003/sig00000020 ;
-  wire \blk00000003/sig0000001f ;
-  wire \blk00000003/sig0000001e ;
-  wire \blk00000003/sig0000001d ;
-  wire \blk00000003/sig0000001c ;
-  wire \blk00000003/sig0000001b ;
-  wire \blk00000003/sig0000001a ;
-  wire \blk00000003/sig00000019 ;
-  wire \blk00000003/sig00000018 ;
-  wire \blk00000003/sig00000017 ;
-  wire \blk00000003/sig00000016 ;
-  wire \blk00000003/sig00000015 ;
-  wire \blk00000003/sig00000014 ;
-  wire \blk00000003/sig00000013 ;
-  wire \blk00000003/sig00000012 ;
-  wire \blk00000003/blk00000022/sig000000d3 ;
-  wire \blk00000003/blk00000022/sig000000d2 ;
-  wire \blk00000003/blk00000022/sig000000d1 ;
-  wire \blk00000003/blk00000022/sig000000d0 ;
-  wire \blk00000003/blk00000022/sig000000cf ;
-  wire \blk00000003/blk00000022/sig000000ce ;
-  wire \blk00000003/blk00000022/sig000000cd ;
-  wire \blk00000003/blk00000022/sig000000cc ;
-  wire \blk00000003/blk00000022/sig000000cb ;
-  wire \blk00000003/blk00000022/sig000000ca ;
-  wire \blk00000003/blk00000022/sig000000c9 ;
-  wire \blk00000003/blk00000022/sig000000c8 ;
-  wire \blk00000003/blk00000022/sig000000c7 ;
-  wire \blk00000003/blk00000022/sig000000c6 ;
-  wire \blk00000003/blk00000022/sig000000c5 ;
-  wire \blk00000003/blk00000022/sig000000c4 ;
-  wire \blk00000003/blk00000022/sig000000c3 ;
-  wire \blk00000003/blk00000022/sig000000c2 ;
-  wire \blk00000003/blk00000022/sig000000c1 ;
-  wire \blk00000003/blk00000022/sig000000c0 ;
-  wire \blk00000003/blk00000022/sig000000bf ;
-  wire \blk00000003/blk00000022/sig000000be ;
-  wire \blk00000003/blk00000022/sig000000bd ;
-  wire \blk00000003/blk00000022/sig000000bc ;
-  wire \blk00000003/blk00000022/sig000000bb ;
-  wire \blk00000003/blk00000022/sig000000ba ;
-  wire \blk00000003/blk00000022/sig000000b9 ;
-  wire \blk00000003/blk00000022/sig000000b8 ;
-  wire \blk00000003/blk00000022/sig000000b7 ;
-  wire \blk00000003/blk00000022/sig000000b6 ;
-  wire \blk00000003/blk00000022/sig000000b5 ;
-  wire \blk00000003/blk00000022/sig000000b4 ;
-  wire \blk00000003/blk00000022/sig000000b3 ;
-  wire \blk00000003/blk00000022/sig000000b2 ;
-  wire \blk00000003/blk00000022/sig000000b1 ;
-  wire \blk00000003/blk00000022/sig000000b0 ;
-  wire \blk00000003/blk00000022/sig000000af ;
-  wire \blk00000003/blk00000022/sig000000ae ;
-  wire \blk00000003/blk00000022/sig000000ad ;
-  wire \blk00000003/blk00000022/sig000000ac ;
-  wire \blk00000003/blk00000022/sig000000ab ;
-  wire \blk00000003/blk00000022/sig000000aa ;
-  wire \blk00000003/blk00000022/sig000000a9 ;
-  wire \blk00000003/blk00000022/sig000000a8 ;
-  wire \blk00000003/blk00000022/sig000000a7 ;
-  wire \blk00000003/blk00000022/sig000000a6 ;
-  wire \blk00000003/blk00000022/sig000000a5 ;
-  wire \blk00000003/blk00000022/sig000000a4 ;
-  wire \blk00000003/blk00000022/sig000000a3 ;
-  wire \blk00000003/blk00000022/sig000000a2 ;
-  wire \blk00000003/blk00000022/sig000000a1 ;
-  wire \blk00000003/blk00000022/sig000000a0 ;
-  wire \blk00000003/blk00000022/sig0000009f ;
-  wire \blk00000003/blk00000022/sig0000009e ;
-  wire NLW_blk00000001_P_UNCONNECTED;
-  wire NLW_blk00000002_G_UNCONNECTED;
-  wire \NLW_blk00000003/blk00000075_ADDRA<2>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_ADDRA<1>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_ADDRA<0>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_ADDRB<2>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_ADDRB<1>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_ADDRB<0>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<31>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<30>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<29>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<28>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<27>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<26>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<25>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<24>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<23>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<22>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<21>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<20>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<19>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<18>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<17>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<16>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<15>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<14>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<13>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<12>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<11>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<10>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<9>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIA<8>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<31>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<30>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<29>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<28>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<27>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<26>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<25>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<24>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<23>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<22>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<21>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<20>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<19>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<18>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<17>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<16>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<15>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<14>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<13>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<12>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<11>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<10>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<9>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<8>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<7>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<6>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<5>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<4>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<3>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<2>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<1>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIB<0>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIPA<3>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIPA<2>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIPA<1>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIPB<3>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIPB<2>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIPB<1>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DIPB<0>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<31>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<30>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<29>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<28>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<27>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<26>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<25>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<24>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<23>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<22>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<21>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<20>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<19>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<18>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<17>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<16>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<15>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<14>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<13>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<12>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<11>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<10>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<9>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOA<8>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<31>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<30>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<29>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<28>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<27>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<26>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<25>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<24>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<23>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<22>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<21>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<20>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<19>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<18>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<17>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<16>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<15>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<14>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<13>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<12>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<11>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<10>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<9>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOB<8>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOPA<3>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOPA<2>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOPA<1>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOPA<0>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOPB<3>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOPB<2>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOPB<1>_UNCONNECTED ;
-  wire \NLW_blk00000003/blk00000075_DOPB<0>_UNCONNECTED ;
-  wire [7 : 0] cosine_0;
-  wire [7 : 0] sine_1;
-  assign
-    sine[7] = sine_1[7],
-    sine[6] = sine_1[6],
-    sine[5] = sine_1[5],
-    sine[4] = sine_1[4],
-    sine[3] = sine_1[3],
-    sine[2] = sine_1[2],
-    sine[1] = sine_1[1],
-    sine[0] = sine_1[0],
-    cosine[7] = cosine_0[7],
-    cosine[6] = cosine_0[6],
-    cosine[5] = cosine_0[5],
-    cosine[4] = cosine_0[4],
-    cosine[3] = cosine_0[3],
-    cosine[2] = cosine_0[2],
-    cosine[1] = cosine_0[1],
-    cosine[0] = cosine_0[0];
-  VCC   blk00000001 (
-    .P(NLW_blk00000001_P_UNCONNECTED)
+  wire sig00000001;
+  wire sig00000002;
+  wire sig00000003;
+  wire sig00000004;
+  wire sig00000005;
+  wire sig00000006;
+  wire sig00000007;
+  wire sig00000008;
+  wire sig00000009;
+  wire sig0000000a;
+  wire sig0000000b;
+  wire sig0000000c;
+  wire sig0000000d;
+  wire sig0000000e;
+  wire sig0000000f;
+  wire sig00000010;
+  wire sig00000011;
+  wire sig00000012;
+  wire sig00000013;
+  wire sig00000014;
+  wire sig00000015;
+  wire sig00000016;
+  wire sig00000017;
+  wire sig00000018;
+  wire sig00000019;
+  wire sig0000001a;
+  wire sig0000001b;
+  wire sig0000001c;
+  wire sig0000001d;
+  wire sig0000001e;
+  wire sig0000001f;
+  wire sig00000020;
+  wire sig00000021;
+  wire sig00000022;
+  wire sig00000023;
+  wire sig00000024;
+  wire sig00000025;
+  wire sig00000026;
+  wire sig00000027;
+  wire sig00000028;
+  wire sig00000029;
+  wire sig0000002a;
+  wire sig0000002b;
+  wire sig0000002c;
+  wire sig0000002d;
+  wire sig0000002e;
+  wire sig0000002f;
+  wire sig00000030;
+  wire sig00000031;
+  wire sig00000032;
+  wire sig00000033;
+  wire sig00000034;
+  wire sig00000035;
+  wire sig00000036;
+  wire sig00000037;
+  wire sig00000038;
+  wire sig00000039;
+  wire sig0000003a;
+  wire sig0000003b;
+  wire sig0000003c;
+  wire sig0000003d;
+  wire sig0000003e;
+  wire sig0000003f;
+  wire sig00000040;
+  wire sig00000041;
+  wire sig00000042;
+  wire sig00000043;
+  wire sig00000044;
+  wire sig00000045;
+  wire sig00000046;
+  wire sig00000047;
+  wire sig00000048;
+  wire sig00000049;
+  wire sig0000004a;
+  wire sig0000004b;
+  wire sig0000004c;
+  wire sig0000004d;
+  wire sig0000004e;
+  wire sig0000004f;
+  wire sig00000050;
+  wire sig00000051;
+  wire sig00000052;
+  wire sig00000053;
+  wire sig00000054;
+  wire sig00000055;
+  wire sig00000056;
+  wire sig00000057;
+  wire sig00000058;
+  wire sig00000059;
+  wire sig0000005a;
+  wire sig0000005b;
+  wire sig0000005c;
+  wire sig0000005d;
+  wire sig0000005e;
+  wire sig0000005f;
+  wire sig00000060;
+  wire sig00000061;
+  wire sig00000062;
+  wire sig00000063;
+  wire sig00000064;
+  wire sig00000065;
+  wire sig00000066;
+  wire sig00000067;
+  wire sig00000068;
+  wire sig00000069;
+  wire \NLW_blk0000006a_ADDRA<2>_UNCONNECTED ;
+  wire \NLW_blk0000006a_ADDRA<1>_UNCONNECTED ;
+  wire \NLW_blk0000006a_ADDRA<0>_UNCONNECTED ;
+  wire \NLW_blk0000006a_ADDRB<2>_UNCONNECTED ;
+  wire \NLW_blk0000006a_ADDRB<1>_UNCONNECTED ;
+  wire \NLW_blk0000006a_ADDRB<0>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<31>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<30>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<29>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<28>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<27>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<26>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<25>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<24>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<23>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<22>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<21>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<20>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<19>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<18>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<17>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<16>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<15>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<14>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<13>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<12>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<11>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<10>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<9>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIA<8>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<31>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<30>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<29>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<28>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<27>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<26>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<25>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<24>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<23>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<22>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<21>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<20>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<19>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<18>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<17>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<16>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<15>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<14>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<13>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<12>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<11>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<10>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<9>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<8>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<7>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<6>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<5>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<4>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<3>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<2>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<1>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIB<0>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIPA<3>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIPA<2>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIPA<1>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIPB<3>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIPB<2>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIPB<1>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DIPB<0>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<31>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<30>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<29>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<28>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<27>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<26>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<25>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<24>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<23>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<22>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<21>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<20>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<19>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<18>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<17>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<16>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<15>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<14>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<13>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<12>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<11>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<10>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<9>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOA<8>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<31>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<30>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<29>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<28>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<27>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<26>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<25>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<24>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<23>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<22>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<21>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<20>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<19>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<18>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<17>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<16>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<15>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<14>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<13>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<12>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<11>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<10>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<9>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOB<8>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOPA<3>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOPA<2>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOPA<1>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOPA<0>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOPB<3>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOPB<2>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOPB<1>_UNCONNECTED ;
+  wire \NLW_blk0000006a_DOPB<0>_UNCONNECTED ;
+  GND   blk00000001 (
+    .G(sig00000001)
   );
-  GND   blk00000002 (
-    .G(NLW_blk00000002_G_UNCONNECTED)
+  VCC   blk00000002 (
+    .P(sig00000002)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000003 (
+    .C(clk),
+    .D(sig0000001c),
+    .Q(sig0000001c)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000004 (
+    .C(clk),
+    .D(sig00000027),
+    .Q(sig00000027)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000005 (
+    .C(clk),
+    .D(sig00000014),
+    .Q(sig00000030)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000006 (
+    .C(clk),
+    .D(sig00000015),
+    .Q(sig00000031)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000007 (
+    .C(clk),
+    .D(sig00000016),
+    .Q(sig00000032)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000008 (
+    .C(clk),
+    .D(sig00000017),
+    .Q(sig00000033)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000009 (
+    .C(clk),
+    .D(sig00000018),
+    .Q(sig00000034)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk0000000a (
+    .C(clk),
+    .D(sig00000019),
+    .Q(sig00000035)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk0000000b (
+    .C(clk),
+    .D(sig0000001a),
+    .Q(sig00000036)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk0000000c (
+    .C(clk),
+    .D(sig0000001b),
+    .Q(sig00000037)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk0000000d (
+    .C(clk),
+    .D(sig00000003),
+    .Q(sig0000001d)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk0000000e (
+    .C(clk),
+    .D(sig00000004),
+    .Q(sig0000001e)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk0000000f (
+    .C(clk),
+    .D(sig00000005),
+    .Q(sig0000001f)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000010 (
+    .C(clk),
+    .D(sig00000006),
+    .Q(sig00000020)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000011 (
+    .C(clk),
+    .D(sig00000007),
+    .Q(sig00000021)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000012 (
+    .C(clk),
+    .D(sig00000008),
+    .Q(sig00000022)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000013 (
+    .C(clk),
+    .D(sig00000009),
+    .Q(sig00000023)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000014 (
+    .C(clk),
+    .D(sig0000000a),
+    .Q(sig00000024)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000015 (
+    .C(clk),
+    .D(sig0000000b),
+    .Q(sig00000025)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000016 (
+    .C(clk),
+    .D(sig0000000c),
+    .Q(sig00000026)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000017 (
+    .C(clk),
+    .D(sig0000000d),
+    .Q(sig00000028)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000018 (
+    .C(clk),
+    .D(sig0000000e),
+    .Q(sig00000029)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk00000019 (
+    .C(clk),
+    .D(sig0000000f),
+    .Q(sig0000002a)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk0000001a (
+    .C(clk),
+    .D(sig00000010),
+    .Q(sig0000002b)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk0000001b (
+    .C(clk),
+    .D(sig00000011),
+    .Q(sig0000002c)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk0000001c (
+    .C(clk),
+    .D(sig00000012),
+    .Q(sig0000002d)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk0000001d (
+    .C(clk),
+    .D(sig00000013),
+    .Q(sig0000002e)
+  );
+  FD #(
+    .INIT ( 1'b0 ))
+  blk0000001e (
+    .C(clk),
+    .D(sig0000004f),
+    .Q(sig0000002f)
+  );
+  XORCY   blk0000001f (
+    .CI(sig0000004e),
+    .LI(sig00000050),
+    .O(sig00000013)
+  );
+  MUXCY   blk00000020 (
+    .CI(sig0000004e),
+    .DI(sig00000001),
+    .S(sig00000050),
+    .O(sig0000004f)
+  );
+  XORCY   blk00000021 (
+    .CI(sig0000004c),
+    .LI(sig00000065),
+    .O(sig00000012)
+  );
+  MUXCY   blk00000022 (
+    .CI(sig0000004c),
+    .DI(sig00000002),
+    .S(sig00000065),
+    .O(sig0000004e)
+  );
+  XORCY   blk00000023 (
+    .CI(sig0000004b),
+    .LI(sig0000004d),
+    .O(sig00000011)
+  );
+  MUXCY   blk00000024 (
+    .CI(sig0000004b),
+    .DI(sig00000001),
+    .S(sig0000004d),
+    .O(sig0000004c)
+  );
+  XORCY   blk00000025 (
+    .CI(sig0000004a),
+    .LI(sig00000064),
+    .O(sig00000010)
+  );
+  MUXCY   blk00000026 (
+    .CI(sig0000004a),
+    .DI(sig00000002),
+    .S(sig00000064),
+    .O(sig0000004b)
+  );
+  XORCY   blk00000027 (
+    .CI(sig00000048),
+    .LI(sig00000063),
+    .O(sig0000000f)
+  );
+  MUXCY   blk00000028 (
+    .CI(sig00000048),
+    .DI(sig00000002),
+    .S(sig00000063),
+    .O(sig0000004a)
+  );
+  XORCY   blk00000029 (
+    .CI(sig00000046),
+    .LI(sig00000049),
+    .O(sig0000000e)
+  );
+  MUXCY   blk0000002a (
+    .CI(sig00000046),
+    .DI(sig00000001),
+    .S(sig00000049),
+    .O(sig00000048)
+  );
+  XORCY   blk0000002b (
+    .CI(sig00000045),
+    .LI(sig00000047),
+    .O(sig0000000d)
+  );
+  MUXCY   blk0000002c (
+    .CI(sig00000045),
+    .DI(sig00000001),
+    .S(sig00000047),
+    .O(sig00000046)
+  );
+  XORCY   blk0000002d (
+    .CI(sig00000044),
+    .LI(sig00000062),
+    .O(sig0000000c)
+  );
+  MUXCY   blk0000002e (
+    .CI(sig00000044),
+    .DI(sig00000002),
+    .S(sig00000062),
+    .O(sig00000045)
+  );
+  XORCY   blk0000002f (
+    .CI(sig00000042),
+    .LI(sig00000061),
+    .O(sig0000000b)
+  );
+  MUXCY   blk00000030 (
+    .CI(sig00000042),
+    .DI(sig00000002),
+    .S(sig00000061),
+    .O(sig00000044)
+  );
+  XORCY   blk00000031 (
+    .CI(sig00000040),
+    .LI(sig00000043),
+    .O(sig0000000a)
+  );
+  MUXCY   blk00000032 (
+    .CI(sig00000040),
+    .DI(sig00000001),
+    .S(sig00000043),
+    .O(sig00000042)
+  );
+  XORCY   blk00000033 (
+    .CI(sig0000003f),
+    .LI(sig00000041),
+    .O(sig00000009)
+  );
+  MUXCY   blk00000034 (
+    .CI(sig0000003f),
+    .DI(sig00000001),
+    .S(sig00000041),
+    .O(sig00000040)
+  );
+  XORCY   blk00000035 (
+    .CI(sig0000003e),
+    .LI(sig00000060),
+    .O(sig00000008)
+  );
+  MUXCY   blk00000036 (
+    .CI(sig0000003e),
+    .DI(sig00000002),
+    .S(sig00000060),
+    .O(sig0000003f)
+  );
+  XORCY   blk00000037 (
+    .CI(sig0000003c),
+    .LI(sig0000005f),
+    .O(sig00000007)
+  );
+  MUXCY   blk00000038 (
+    .CI(sig0000003c),
+    .DI(sig00000002),
+    .S(sig0000005f),
+    .O(sig0000003e)
+  );
+  XORCY   blk00000039 (
+    .CI(sig0000003a),
+    .LI(sig0000003d),
+    .O(sig00000006)
+  );
+  MUXCY   blk0000003a (
+    .CI(sig0000003a),
+    .DI(sig00000001),
+    .S(sig0000003d),
+    .O(sig0000003c)
+  );
+  XORCY   blk0000003b (
+    .CI(sig00000039),
+    .LI(sig0000003b),
+    .O(sig00000005)
+  );
+  MUXCY   blk0000003c (
+    .CI(sig00000039),
+    .DI(sig00000001),
+    .S(sig0000003b),
+    .O(sig0000003a)
+  );
+  XORCY   blk0000003d (
+    .CI(sig00000038),
+    .LI(sig0000005e),
+    .O(sig00000004)
+  );
+  MUXCY   blk0000003e (
+    .CI(sig00000038),
+    .DI(sig00000002),
+    .S(sig0000005e),
+    .O(sig00000039)
+  );
+  XORCY   blk0000003f (
+    .CI(sig0000005b),
+    .LI(sig0000005d),
+    .O(sig00000003)
+  );
+  MUXCY   blk00000040 (
+    .CI(sig0000005b),
+    .DI(sig00000002),
+    .S(sig0000005d),
+    .O(sig00000038)
+  );
+  XORCY   blk00000041 (
+    .CI(sig00000059),
+    .LI(sig0000005c),
+    .O(sig0000001b)
+  );
+  MUXCY   blk00000042 (
+    .CI(sig00000059),
+    .DI(sig00000001),
+    .S(sig0000005c),
+    .O(sig0000005b)
+  );
+  XORCY   blk00000043 (
+    .CI(sig00000058),
+    .LI(sig0000005a),
+    .O(sig0000001a)
+  );
+  MUXCY   blk00000044 (
+    .CI(sig00000058),
+    .DI(sig00000001),
+    .S(sig0000005a),
+    .O(sig00000059)
+  );
+  XORCY   blk00000045 (
+    .CI(sig00000057),
+    .LI(sig00000069),
+    .O(sig00000019)
+  );
+  MUXCY   blk00000046 (
+    .CI(sig00000057),
+    .DI(sig00000002),
+    .S(sig00000069),
+    .O(sig00000058)
+  );
+  XORCY   blk00000047 (
+    .CI(sig00000055),
+    .LI(sig00000068),
+    .O(sig00000018)
+  );
+  MUXCY   blk00000048 (
+    .CI(sig00000055),
+    .DI(sig00000002),
+    .S(sig00000068),
+    .O(sig00000057)
+  );
+  XORCY   blk00000049 (
+    .CI(sig00000053),
+    .LI(sig00000056),
+    .O(sig00000017)
+  );
+  MUXCY   blk0000004a (
+    .CI(sig00000053),
+    .DI(sig00000001),
+    .S(sig00000056),
+    .O(sig00000055)
+  );
+  XORCY   blk0000004b (
+    .CI(sig00000052),
+    .LI(sig00000054),
+    .O(sig00000016)
+  );
+  MUXCY   blk0000004c (
+    .CI(sig00000052),
+    .DI(sig00000001),
+    .S(sig00000054),
+    .O(sig00000053)
+  );
+  XORCY   blk0000004d (
+    .CI(sig00000051),
+    .LI(sig00000067),
+    .O(sig00000015)
+  );
+  MUXCY   blk0000004e (
+    .CI(sig00000051),
+    .DI(sig00000002),
+    .S(sig00000067),
+    .O(sig00000052)
+  );
+  XORCY   blk0000004f (
+    .CI(sig00000001),
+    .LI(sig00000066),
+    .O(sig00000014)
+  );
+  MUXCY   blk00000050 (
+    .CI(sig00000001),
+    .DI(sig00000002),
+    .S(sig00000066),
+    .O(sig00000051)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk00000051 (
+    .I0(sig0000002e),
+    .O(sig00000050)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk00000052 (
+    .I0(sig0000002c),
+    .O(sig0000004d)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk00000053 (
+    .I0(sig00000029),
+    .O(sig00000049)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk00000054 (
+    .I0(sig00000028),
+    .O(sig00000047)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk00000055 (
+    .I0(sig00000024),
+    .O(sig00000043)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk00000056 (
+    .I0(sig00000023),
+    .O(sig00000041)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk00000057 (
+    .I0(sig00000020),
+    .O(sig0000003d)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk00000058 (
+    .I0(sig0000001f),
+    .O(sig0000003b)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk00000059 (
+    .I0(sig00000037),
+    .O(sig0000005c)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk0000005a (
+    .I0(sig00000036),
+    .O(sig0000005a)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk0000005b (
+    .I0(sig00000033),
+    .O(sig00000056)
+  );
+  LUT1 #(
+    .INIT ( 2'h2 ))
+  blk0000005c (
+    .I0(sig00000032),
+    .O(sig00000054)
+  );
+  INV   blk0000005d (
+    .I(sig0000002d),
+    .O(sig00000065)
+  );
+  INV   blk0000005e (
+    .I(sig0000002b),
+    .O(sig00000064)
+  );
+  INV   blk0000005f (
+    .I(sig0000002a),
+    .O(sig00000063)
+  );
+  INV   blk00000060 (
+    .I(sig00000026),
+    .O(sig00000062)
+  );
+  INV   blk00000061 (
+    .I(sig00000025),
+    .O(sig00000061)
+  );
+  INV   blk00000062 (
+    .I(sig00000022),
+    .O(sig00000060)
+  );
+  INV   blk00000063 (
+    .I(sig00000021),
+    .O(sig0000005f)
+  );
+  INV   blk00000064 (
+    .I(sig0000001e),
+    .O(sig0000005e)
+  );
+  INV   blk00000065 (
+    .I(sig0000001d),
+    .O(sig0000005d)
+  );
+  INV   blk00000066 (
+    .I(sig00000035),
+    .O(sig00000069)
+  );
+  INV   blk00000067 (
+    .I(sig00000034),
+    .O(sig00000068)
+  );
+  INV   blk00000068 (
+    .I(sig00000031),
+    .O(sig00000067)
+  );
+  INV   blk00000069 (
+    .I(sig00000030),
+    .O(sig00000066)
   );
   RAMB16BWER #(
+    .SIM_COLLISION_CHECK ( "ALL" ),
+    .SRVAL_A ( 36'h000000000 ),
     .INIT_00 ( 256'h585653514F4C4A4745423F3D3A3734322F2C292623201D1A1714110E0B080502 ),
     .INIT_01 ( 256'h7E7E7E7E7D7D7C7C7B7B7A7978777675747371706E6D6B6A68666462605E5C5A ),
     .INIT_02 ( 256'h5A5C5E60626466686A6B6D6E7071737475767778797A7B7B7C7C7D7D7E7E7E7E ),
@@ -321,11 +890,9 @@ module dds_compiler_v4_0 (
     .INIT_0B ( 256'h82828282838384848585868788898A8B8C8D8F9092939596989A9C9EA0A2A4A6 ),
     .INIT_0C ( 256'hA6A4A2A09E9C9A9896959392908F8D8C8B8A8988878685858484838382828282 ),
     .INIT_0D ( 256'hFEFBF8F5F2EFECE9E6E3E0DDDAD7D4D1CECCC9C6C3C1BEBBB9B6B4B1AFADAAA8 ),
-    .INIT_0E ( 256'h585653514F4C4A4745423F3D3A3734322F2C292623201D1A1714110E0B080502 ),
-    .INIT_0F ( 256'h7E7E7E7E7D7D7C7C7B7B7A7978777675747371706E6D6B6A68666462605E5C5A ),
-    .INIT_A ( 36'h000000000 ),
-    .INIT_B ( 36'h000000000 ),
-    .WRITE_MODE_A ( "WRITE_FIRST" ),
+    .INIT_3E ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
+    .INIT_3F ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
+    .WRITE_MODE_A ( "READ_FIRST" ),
     .WRITE_MODE_B ( "WRITE_FIRST" ),
     .DATA_WIDTH_A ( 9 ),
     .DATA_WIDTH_B ( 9 ),
@@ -333,6 +900,8 @@ module dds_compiler_v4_0 (
     .DOB_REG ( 1 ),
     .INIT_FILE ( "NONE" ),
     .RSTTYPE ( "SYNC" ),
+    .INIT_0E ( 256'h585653514F4C4A4745423F3D3A3734322F2C292623201D1A1714110E0B080502 ),
+    .INIT_0F ( 256'h7E7E7E7E7D7D7C7C7B7B7A7978777675747371706E6D6B6A68666462605E5C5A ),
     .INIT_10 ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
     .INIT_11 ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
     .INIT_12 ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
@@ -379,8 +948,8 @@ module dds_compiler_v4_0 (
     .INIT_3B ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
     .INIT_3C ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
     .INIT_3D ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
-    .INIT_3E ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
-    .INIT_3F ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
+    .INIT_A ( 36'h000000000 ),
+    .INIT_B ( 36'h000000000 ),
     .INITP_00 ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
     .INITP_01 ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
     .INITP_02 ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
@@ -389,780 +958,67 @@ module dds_compiler_v4_0 (
     .INITP_05 ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
     .INITP_06 ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
     .INITP_07 ( 256'h0000000000000000000000000000000000000000000000000000000000000000 ),
-    .SRVAL_A ( 36'h000000000 ),
-    .SRVAL_B ( 36'h000000000 ),
-    .SIM_COLLISION_CHECK ( "ALL" ))
-  \blk00000003/blk00000075  (
+    .SRVAL_B ( 36'h000000000 ))
+  blk0000006a (
     .CLKA(clk),
     .CLKB(clk),
-    .ENA(\blk00000003/sig00000013 ),
-    .ENB(\blk00000003/sig00000013 ),
-    .RSTA(\blk00000003/sig00000012 ),
-    .RSTB(\blk00000003/sig00000012 ),
-    .REGCEA(\blk00000003/sig00000013 ),
-    .REGCEB(\blk00000003/sig00000013 ),
-    .ADDRA({\blk00000003/sig00000012 , \blk00000003/sig00000012 , \blk00000003/sig00000012 , \blk00000003/sig00000017 , \blk00000003/sig00000019 , 
-\blk00000003/sig0000001b , \blk00000003/sig0000001d , \blk00000003/sig0000001f , \blk00000003/sig00000021 , \blk00000003/sig00000023 , 
-\blk00000003/sig00000025 , \NLW_blk00000003/blk00000075_ADDRA<2>_UNCONNECTED , \NLW_blk00000003/blk00000075_ADDRA<1>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_ADDRA<0>_UNCONNECTED }),
-    .ADDRB({\blk00000003/sig00000012 , \blk00000003/sig00000012 , \blk00000003/sig00000013 , \blk00000003/sig00000017 , \blk00000003/sig00000019 , 
-\blk00000003/sig0000001b , \blk00000003/sig0000001d , \blk00000003/sig0000001f , \blk00000003/sig00000021 , \blk00000003/sig00000023 , 
-\blk00000003/sig00000025 , \NLW_blk00000003/blk00000075_ADDRB<2>_UNCONNECTED , \NLW_blk00000003/blk00000075_ADDRB<1>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_ADDRB<0>_UNCONNECTED }),
-    .DIA({\NLW_blk00000003/blk00000075_DIA<31>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<30>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIA<29>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<28>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIA<27>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<26>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIA<25>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<24>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIA<23>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<22>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIA<21>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<20>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIA<19>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<18>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIA<17>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<16>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIA<15>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<14>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIA<13>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<12>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIA<11>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<10>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIA<9>_UNCONNECTED 
-, \NLW_blk00000003/blk00000075_DIA<8>_UNCONNECTED , \blk00000003/sig00000012 , \blk00000003/sig00000012 , \blk00000003/sig00000012 , 
-\blk00000003/sig00000012 , \blk00000003/sig00000012 , \blk00000003/sig00000012 , \blk00000003/sig00000012 , \blk00000003/sig00000012 }),
-    .DIB({\NLW_blk00000003/blk00000075_DIB<31>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<30>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIB<29>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<28>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIB<27>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<26>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIB<25>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<24>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIB<23>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<22>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIB<21>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<20>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIB<19>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<18>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIB<17>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<16>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIB<15>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<14>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIB<13>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<12>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIB<11>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<10>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<9>_UNCONNECTED 
-, \NLW_blk00000003/blk00000075_DIB<8>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<7>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<6>_UNCONNECTED 
-, \NLW_blk00000003/blk00000075_DIB<5>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<4>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<3>_UNCONNECTED 
-, \NLW_blk00000003/blk00000075_DIB<2>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<1>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIB<0>_UNCONNECTED 
-}),
-    .DIPA({\NLW_blk00000003/blk00000075_DIPA<3>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIPA<2>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIPA<1>_UNCONNECTED , \blk00000003/sig00000012 }),
-    .DIPB({\NLW_blk00000003/blk00000075_DIPB<3>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIPB<2>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DIPB<1>_UNCONNECTED , \NLW_blk00000003/blk00000075_DIPB<0>_UNCONNECTED }),
-    .WEA({\blk00000003/sig00000012 , \blk00000003/sig00000012 , \blk00000003/sig00000012 , \blk00000003/sig00000012 }),
-    .WEB({\blk00000003/sig00000012 , \blk00000003/sig00000012 , \blk00000003/sig00000012 , \blk00000003/sig00000012 }),
-    .DOA({\NLW_blk00000003/blk00000075_DOA<31>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<30>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOA<29>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<28>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOA<27>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<26>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOA<25>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<24>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOA<23>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<22>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOA<21>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<20>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOA<19>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<18>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOA<17>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<16>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOA<15>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<14>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOA<13>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<12>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOA<11>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<10>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOA<9>_UNCONNECTED 
-, \NLW_blk00000003/blk00000075_DOA<8>_UNCONNECTED , sine_1[7], sine_1[6], sine_1[5], sine_1[4], sine_1[3], sine_1[2], sine_1[1], sine_1[0]}),
-    .DOB({\NLW_blk00000003/blk00000075_DOB<31>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<30>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOB<29>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<28>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOB<27>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<26>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOB<25>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<24>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOB<23>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<22>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOB<21>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<20>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOB<19>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<18>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOB<17>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<16>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOB<15>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<14>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOB<13>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<12>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOB<11>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<10>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOB<9>_UNCONNECTED 
-, \NLW_blk00000003/blk00000075_DOB<8>_UNCONNECTED , cosine_0[7], cosine_0[6], cosine_0[5], cosine_0[4], cosine_0[3], cosine_0[2], cosine_0[1], 
-cosine_0[0]}),
-    .DOPA({\NLW_blk00000003/blk00000075_DOPA<3>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOPA<2>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOPA<1>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOPA<0>_UNCONNECTED }),
-    .DOPB({\NLW_blk00000003/blk00000075_DOPB<3>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOPB<2>_UNCONNECTED , 
-\NLW_blk00000003/blk00000075_DOPB<1>_UNCONNECTED , \NLW_blk00000003/blk00000075_DOPB<0>_UNCONNECTED })
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000021  (
-    .C(clk),
-    .D(\blk00000003/sig0000004a ),
-    .Q(\blk00000003/sig0000004b )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000020  (
-    .C(clk),
-    .D(\blk00000003/sig00000048 ),
-    .Q(\blk00000003/sig00000049 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000001f  (
-    .C(clk),
-    .D(\blk00000003/sig00000046 ),
-    .Q(\blk00000003/sig00000047 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000001e  (
-    .C(clk),
-    .D(\blk00000003/sig00000044 ),
-    .Q(\blk00000003/sig00000045 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000001d  (
-    .C(clk),
-    .D(\blk00000003/sig00000042 ),
-    .Q(\blk00000003/sig00000043 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000001c  (
-    .C(clk),
-    .D(\blk00000003/sig00000040 ),
-    .Q(\blk00000003/sig00000041 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000001b  (
-    .C(clk),
-    .D(\blk00000003/sig0000003e ),
-    .Q(\blk00000003/sig0000003f )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000001a  (
-    .C(clk),
-    .D(\blk00000003/sig0000003c ),
-    .Q(\blk00000003/sig0000003d )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000019  (
-    .C(clk),
-    .D(\blk00000003/sig0000003a ),
-    .Q(\blk00000003/sig0000003b )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000018  (
-    .C(clk),
-    .D(\blk00000003/sig00000038 ),
-    .Q(\blk00000003/sig00000039 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000017  (
-    .C(clk),
-    .D(\blk00000003/sig00000036 ),
-    .Q(\blk00000003/sig00000037 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000016  (
-    .C(clk),
-    .D(\blk00000003/sig00000034 ),
-    .Q(\blk00000003/sig00000035 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000015  (
-    .C(clk),
-    .D(\blk00000003/sig00000032 ),
-    .Q(\blk00000003/sig00000033 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000014  (
-    .C(clk),
-    .D(\blk00000003/sig00000030 ),
-    .Q(\blk00000003/sig00000031 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000013  (
-    .C(clk),
-    .D(\blk00000003/sig0000002e ),
-    .Q(\blk00000003/sig0000002f )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000012  (
-    .C(clk),
-    .D(\blk00000003/sig0000002c ),
-    .Q(\blk00000003/sig0000002d )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000011  (
-    .C(clk),
-    .D(\blk00000003/sig0000002a ),
-    .Q(\blk00000003/sig0000002b )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000010  (
-    .C(clk),
-    .D(\blk00000003/sig00000028 ),
-    .Q(\blk00000003/sig00000029 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000000f  (
-    .C(clk),
-    .D(\blk00000003/sig00000026 ),
-    .Q(\blk00000003/sig00000027 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000000e  (
-    .C(clk),
-    .D(\blk00000003/sig00000024 ),
-    .Q(\blk00000003/sig00000025 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000000d  (
-    .C(clk),
-    .D(\blk00000003/sig00000022 ),
-    .Q(\blk00000003/sig00000023 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000000c  (
-    .C(clk),
-    .D(\blk00000003/sig00000020 ),
-    .Q(\blk00000003/sig00000021 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000000b  (
-    .C(clk),
-    .D(\blk00000003/sig0000001e ),
-    .Q(\blk00000003/sig0000001f )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk0000000a  (
-    .C(clk),
-    .D(\blk00000003/sig0000001c ),
-    .Q(\blk00000003/sig0000001d )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000009  (
-    .C(clk),
-    .D(\blk00000003/sig0000001a ),
-    .Q(\blk00000003/sig0000001b )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000008  (
-    .C(clk),
-    .D(\blk00000003/sig00000018 ),
-    .Q(\blk00000003/sig00000019 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000007  (
-    .C(clk),
-    .D(\blk00000003/sig00000016 ),
-    .Q(\blk00000003/sig00000017 )
-  );
-  FD #(
-    .INIT ( 1'b0 ))
-  \blk00000003/blk00000006  (
-    .C(clk),
-    .D(\blk00000003/sig00000014 ),
-    .Q(\blk00000003/sig00000015 )
-  );
-  VCC   \blk00000003/blk00000005  (
-    .P(\blk00000003/sig00000013 )
-  );
-  GND   \blk00000003/blk00000004  (
-    .G(\blk00000003/sig00000012 )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000074  (
-    .CI(\blk00000003/blk00000022/sig000000d2 ),
-    .LI(\blk00000003/blk00000022/sig000000d3 ),
-    .O(\blk00000003/sig00000016 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000073  (
-    .CI(\blk00000003/blk00000022/sig000000d2 ),
-    .DI(\blk00000003/sig00000017 ),
-    .S(\blk00000003/blk00000022/sig000000d3 ),
-    .O(\blk00000003/sig00000014 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000072  (
-    .I0(\blk00000003/sig00000017 ),
-    .I1(\blk00000003/sig00000012 ),
-    .O(\blk00000003/blk00000022/sig000000d3 )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000071  (
-    .CI(\blk00000003/blk00000022/sig000000d0 ),
-    .LI(\blk00000003/blk00000022/sig000000d1 ),
-    .O(\blk00000003/sig00000018 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000070  (
-    .CI(\blk00000003/blk00000022/sig000000d0 ),
-    .DI(\blk00000003/sig00000019 ),
-    .S(\blk00000003/blk00000022/sig000000d1 ),
-    .O(\blk00000003/blk00000022/sig000000d2 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk0000006f  (
-    .I0(\blk00000003/sig00000019 ),
-    .I1(\blk00000003/sig00000013 ),
-    .O(\blk00000003/blk00000022/sig000000d1 )
-  );
-  XORCY   \blk00000003/blk00000022/blk0000006e  (
-    .CI(\blk00000003/blk00000022/sig000000ce ),
-    .LI(\blk00000003/blk00000022/sig000000cf ),
-    .O(\blk00000003/sig0000001a )
-  );
-  MUXCY   \blk00000003/blk00000022/blk0000006d  (
-    .CI(\blk00000003/blk00000022/sig000000ce ),
-    .DI(\blk00000003/sig0000001b ),
-    .S(\blk00000003/blk00000022/sig000000cf ),
-    .O(\blk00000003/blk00000022/sig000000d0 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk0000006c  (
-    .I0(\blk00000003/sig0000001b ),
-    .I1(\blk00000003/sig00000012 ),
-    .O(\blk00000003/blk00000022/sig000000cf )
-  );
-  XORCY   \blk00000003/blk00000022/blk0000006b  (
-    .CI(\blk00000003/blk00000022/sig000000cc ),
-    .LI(\blk00000003/blk00000022/sig000000cd ),
-    .O(\blk00000003/sig0000001c )
-  );
-  MUXCY   \blk00000003/blk00000022/blk0000006a  (
-    .CI(\blk00000003/blk00000022/sig000000cc ),
-    .DI(\blk00000003/sig0000001d ),
-    .S(\blk00000003/blk00000022/sig000000cd ),
-    .O(\blk00000003/blk00000022/sig000000ce )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000069  (
-    .I0(\blk00000003/sig0000001d ),
-    .I1(\blk00000003/sig00000013 ),
-    .O(\blk00000003/blk00000022/sig000000cd )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000068  (
-    .CI(\blk00000003/blk00000022/sig000000ca ),
-    .LI(\blk00000003/blk00000022/sig000000cb ),
-    .O(\blk00000003/sig0000001e )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000067  (
-    .CI(\blk00000003/blk00000022/sig000000ca ),
-    .DI(\blk00000003/sig0000001f ),
-    .S(\blk00000003/blk00000022/sig000000cb ),
-    .O(\blk00000003/blk00000022/sig000000cc )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000066  (
-    .I0(\blk00000003/sig0000001f ),
-    .I1(\blk00000003/sig00000013 ),
-    .O(\blk00000003/blk00000022/sig000000cb )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000065  (
-    .CI(\blk00000003/blk00000022/sig000000c8 ),
-    .LI(\blk00000003/blk00000022/sig000000c9 ),
-    .O(\blk00000003/sig00000020 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000064  (
-    .CI(\blk00000003/blk00000022/sig000000c8 ),
-    .DI(\blk00000003/sig00000021 ),
-    .S(\blk00000003/blk00000022/sig000000c9 ),
-    .O(\blk00000003/blk00000022/sig000000ca )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000063  (
-    .I0(\blk00000003/sig00000021 ),
-    .I1(\blk00000003/sig00000012 ),
-    .O(\blk00000003/blk00000022/sig000000c9 )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000062  (
-    .CI(\blk00000003/blk00000022/sig000000c6 ),
-    .LI(\blk00000003/blk00000022/sig000000c7 ),
-    .O(\blk00000003/sig00000022 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000061  (
-    .CI(\blk00000003/blk00000022/sig000000c6 ),
-    .DI(\blk00000003/sig00000023 ),
-    .S(\blk00000003/blk00000022/sig000000c7 ),
-    .O(\blk00000003/blk00000022/sig000000c8 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000060  (
-    .I0(\blk00000003/sig00000023 ),
-    .I1(\blk00000003/sig00000012 ),
-    .O(\blk00000003/blk00000022/sig000000c7 )
-  );
-  XORCY   \blk00000003/blk00000022/blk0000005f  (
-    .CI(\blk00000003/blk00000022/sig000000c4 ),
-    .LI(\blk00000003/blk00000022/sig000000c5 ),
-    .O(\blk00000003/sig00000024 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk0000005e  (
-    .CI(\blk00000003/blk00000022/sig000000c4 ),
-    .DI(\blk00000003/sig00000025 ),
-    .S(\blk00000003/blk00000022/sig000000c5 ),
-    .O(\blk00000003/blk00000022/sig000000c6 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk0000005d  (
-    .I0(\blk00000003/sig00000025 ),
-    .I1(\blk00000003/sig00000013 ),
-    .O(\blk00000003/blk00000022/sig000000c5 )
-  );
-  XORCY   \blk00000003/blk00000022/blk0000005c  (
-    .CI(\blk00000003/blk00000022/sig000000c2 ),
-    .LI(\blk00000003/blk00000022/sig000000c3 ),
-    .O(\blk00000003/sig00000026 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk0000005b  (
-    .CI(\blk00000003/blk00000022/sig000000c2 ),
-    .DI(\blk00000003/sig00000027 ),
-    .S(\blk00000003/blk00000022/sig000000c3 ),
-    .O(\blk00000003/blk00000022/sig000000c4 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk0000005a  (
-    .I0(\blk00000003/sig00000027 ),
-    .I1(\blk00000003/sig00000013 ),
-    .O(\blk00000003/blk00000022/sig000000c3 )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000059  (
-    .CI(\blk00000003/blk00000022/sig000000c0 ),
-    .LI(\blk00000003/blk00000022/sig000000c1 ),
-    .O(\blk00000003/sig00000028 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000058  (
-    .CI(\blk00000003/blk00000022/sig000000c0 ),
-    .DI(\blk00000003/sig00000029 ),
-    .S(\blk00000003/blk00000022/sig000000c1 ),
-    .O(\blk00000003/blk00000022/sig000000c2 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000057  (
-    .I0(\blk00000003/sig00000029 ),
-    .I1(\blk00000003/sig00000012 ),
-    .O(\blk00000003/blk00000022/sig000000c1 )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000056  (
-    .CI(\blk00000003/blk00000022/sig000000be ),
-    .LI(\blk00000003/blk00000022/sig000000bf ),
-    .O(\blk00000003/sig0000002a )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000055  (
-    .CI(\blk00000003/blk00000022/sig000000be ),
-    .DI(\blk00000003/sig0000002b ),
-    .S(\blk00000003/blk00000022/sig000000bf ),
-    .O(\blk00000003/blk00000022/sig000000c0 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000054  (
-    .I0(\blk00000003/sig0000002b ),
-    .I1(\blk00000003/sig00000012 ),
-    .O(\blk00000003/blk00000022/sig000000bf )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000053  (
-    .CI(\blk00000003/blk00000022/sig000000bc ),
-    .LI(\blk00000003/blk00000022/sig000000bd ),
-    .O(\blk00000003/sig0000002c )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000052  (
-    .CI(\blk00000003/blk00000022/sig000000bc ),
-    .DI(\blk00000003/sig0000002d ),
-    .S(\blk00000003/blk00000022/sig000000bd ),
-    .O(\blk00000003/blk00000022/sig000000be )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000051  (
-    .I0(\blk00000003/sig0000002d ),
-    .I1(\blk00000003/sig00000013 ),
-    .O(\blk00000003/blk00000022/sig000000bd )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000050  (
-    .CI(\blk00000003/blk00000022/sig000000ba ),
-    .LI(\blk00000003/blk00000022/sig000000bb ),
-    .O(\blk00000003/sig0000002e )
-  );
-  MUXCY   \blk00000003/blk00000022/blk0000004f  (
-    .CI(\blk00000003/blk00000022/sig000000ba ),
-    .DI(\blk00000003/sig0000002f ),
-    .S(\blk00000003/blk00000022/sig000000bb ),
-    .O(\blk00000003/blk00000022/sig000000bc )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk0000004e  (
-    .I0(\blk00000003/sig00000013 ),
-    .I1(\blk00000003/sig0000002f ),
-    .O(\blk00000003/blk00000022/sig000000bb )
-  );
-  XORCY   \blk00000003/blk00000022/blk0000004d  (
-    .CI(\blk00000003/blk00000022/sig000000b8 ),
-    .LI(\blk00000003/blk00000022/sig000000b9 ),
-    .O(\blk00000003/sig00000030 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk0000004c  (
-    .CI(\blk00000003/blk00000022/sig000000b8 ),
-    .DI(\blk00000003/sig00000031 ),
-    .S(\blk00000003/blk00000022/sig000000b9 ),
-    .O(\blk00000003/blk00000022/sig000000ba )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk0000004b  (
-    .I0(\blk00000003/sig00000012 ),
-    .I1(\blk00000003/sig00000031 ),
-    .O(\blk00000003/blk00000022/sig000000b9 )
-  );
-  XORCY   \blk00000003/blk00000022/blk0000004a  (
-    .CI(\blk00000003/blk00000022/sig000000b6 ),
-    .LI(\blk00000003/blk00000022/sig000000b7 ),
-    .O(\blk00000003/sig00000032 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000049  (
-    .CI(\blk00000003/blk00000022/sig000000b6 ),
-    .DI(\blk00000003/sig00000033 ),
-    .S(\blk00000003/blk00000022/sig000000b7 ),
-    .O(\blk00000003/blk00000022/sig000000b8 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000048  (
-    .I0(\blk00000003/sig00000012 ),
-    .I1(\blk00000003/sig00000033 ),
-    .O(\blk00000003/blk00000022/sig000000b7 )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000047  (
-    .CI(\blk00000003/blk00000022/sig000000b4 ),
-    .LI(\blk00000003/blk00000022/sig000000b5 ),
-    .O(\blk00000003/sig00000034 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000046  (
-    .CI(\blk00000003/blk00000022/sig000000b4 ),
-    .DI(\blk00000003/sig00000035 ),
-    .S(\blk00000003/blk00000022/sig000000b5 ),
-    .O(\blk00000003/blk00000022/sig000000b6 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000045  (
-    .I0(\blk00000003/sig00000013 ),
-    .I1(\blk00000003/sig00000035 ),
-    .O(\blk00000003/blk00000022/sig000000b5 )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000044  (
-    .CI(\blk00000003/blk00000022/sig000000b2 ),
-    .LI(\blk00000003/blk00000022/sig000000b3 ),
-    .O(\blk00000003/sig00000036 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000043  (
-    .CI(\blk00000003/blk00000022/sig000000b2 ),
-    .DI(\blk00000003/sig00000037 ),
-    .S(\blk00000003/blk00000022/sig000000b3 ),
-    .O(\blk00000003/blk00000022/sig000000b4 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000042  (
-    .I0(\blk00000003/sig00000013 ),
-    .I1(\blk00000003/sig00000037 ),
-    .O(\blk00000003/blk00000022/sig000000b3 )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000041  (
-    .CI(\blk00000003/blk00000022/sig000000b0 ),
-    .LI(\blk00000003/blk00000022/sig000000b1 ),
-    .O(\blk00000003/sig00000038 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000040  (
-    .CI(\blk00000003/blk00000022/sig000000b0 ),
-    .DI(\blk00000003/sig00000039 ),
-    .S(\blk00000003/blk00000022/sig000000b1 ),
-    .O(\blk00000003/blk00000022/sig000000b2 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk0000003f  (
-    .I0(\blk00000003/sig00000012 ),
-    .I1(\blk00000003/sig00000039 ),
-    .O(\blk00000003/blk00000022/sig000000b1 )
-  );
-  XORCY   \blk00000003/blk00000022/blk0000003e  (
-    .CI(\blk00000003/blk00000022/sig000000ae ),
-    .LI(\blk00000003/blk00000022/sig000000af ),
-    .O(\blk00000003/sig0000003a )
-  );
-  MUXCY   \blk00000003/blk00000022/blk0000003d  (
-    .CI(\blk00000003/blk00000022/sig000000ae ),
-    .DI(\blk00000003/sig0000003b ),
-    .S(\blk00000003/blk00000022/sig000000af ),
-    .O(\blk00000003/blk00000022/sig000000b0 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk0000003c  (
-    .I0(\blk00000003/sig00000012 ),
-    .I1(\blk00000003/sig0000003b ),
-    .O(\blk00000003/blk00000022/sig000000af )
-  );
-  XORCY   \blk00000003/blk00000022/blk0000003b  (
-    .CI(\blk00000003/blk00000022/sig000000ac ),
-    .LI(\blk00000003/blk00000022/sig000000ad ),
-    .O(\blk00000003/sig0000003c )
-  );
-  MUXCY   \blk00000003/blk00000022/blk0000003a  (
-    .CI(\blk00000003/blk00000022/sig000000ac ),
-    .DI(\blk00000003/sig0000003d ),
-    .S(\blk00000003/blk00000022/sig000000ad ),
-    .O(\blk00000003/blk00000022/sig000000ae )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000039  (
-    .I0(\blk00000003/sig00000013 ),
-    .I1(\blk00000003/sig0000003d ),
-    .O(\blk00000003/blk00000022/sig000000ad )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000038  (
-    .CI(\blk00000003/blk00000022/sig000000aa ),
-    .LI(\blk00000003/blk00000022/sig000000ab ),
-    .O(\blk00000003/sig0000003e )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000037  (
-    .CI(\blk00000003/blk00000022/sig000000aa ),
-    .DI(\blk00000003/sig0000003f ),
-    .S(\blk00000003/blk00000022/sig000000ab ),
-    .O(\blk00000003/blk00000022/sig000000ac )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000036  (
-    .I0(\blk00000003/sig00000013 ),
-    .I1(\blk00000003/sig0000003f ),
-    .O(\blk00000003/blk00000022/sig000000ab )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000035  (
-    .CI(\blk00000003/blk00000022/sig000000a8 ),
-    .LI(\blk00000003/blk00000022/sig000000a9 ),
-    .O(\blk00000003/sig00000040 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000034  (
-    .CI(\blk00000003/blk00000022/sig000000a8 ),
-    .DI(\blk00000003/sig00000041 ),
-    .S(\blk00000003/blk00000022/sig000000a9 ),
-    .O(\blk00000003/blk00000022/sig000000aa )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000033  (
-    .I0(\blk00000003/sig00000012 ),
-    .I1(\blk00000003/sig00000041 ),
-    .O(\blk00000003/blk00000022/sig000000a9 )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000032  (
-    .CI(\blk00000003/blk00000022/sig000000a6 ),
-    .LI(\blk00000003/blk00000022/sig000000a7 ),
-    .O(\blk00000003/sig00000042 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000031  (
-    .CI(\blk00000003/blk00000022/sig000000a6 ),
-    .DI(\blk00000003/sig00000043 ),
-    .S(\blk00000003/blk00000022/sig000000a7 ),
-    .O(\blk00000003/blk00000022/sig000000a8 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000030  (
-    .I0(\blk00000003/sig00000012 ),
-    .I1(\blk00000003/sig00000043 ),
-    .O(\blk00000003/blk00000022/sig000000a7 )
-  );
-  XORCY   \blk00000003/blk00000022/blk0000002f  (
-    .CI(\blk00000003/blk00000022/sig000000a4 ),
-    .LI(\blk00000003/blk00000022/sig000000a5 ),
-    .O(\blk00000003/sig00000044 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk0000002e  (
-    .CI(\blk00000003/blk00000022/sig000000a4 ),
-    .DI(\blk00000003/sig00000045 ),
-    .S(\blk00000003/blk00000022/sig000000a5 ),
-    .O(\blk00000003/blk00000022/sig000000a6 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk0000002d  (
-    .I0(\blk00000003/sig00000013 ),
-    .I1(\blk00000003/sig00000045 ),
-    .O(\blk00000003/blk00000022/sig000000a5 )
-  );
-  XORCY   \blk00000003/blk00000022/blk0000002c  (
-    .CI(\blk00000003/blk00000022/sig000000a2 ),
-    .LI(\blk00000003/blk00000022/sig000000a3 ),
-    .O(\blk00000003/sig00000046 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk0000002b  (
-    .CI(\blk00000003/blk00000022/sig000000a2 ),
-    .DI(\blk00000003/sig00000047 ),
-    .S(\blk00000003/blk00000022/sig000000a3 ),
-    .O(\blk00000003/blk00000022/sig000000a4 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk0000002a  (
-    .I0(\blk00000003/sig00000013 ),
-    .I1(\blk00000003/sig00000047 ),
-    .O(\blk00000003/blk00000022/sig000000a3 )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000029  (
-    .CI(\blk00000003/blk00000022/sig000000a0 ),
-    .LI(\blk00000003/blk00000022/sig000000a1 ),
-    .O(\blk00000003/sig00000048 )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000028  (
-    .CI(\blk00000003/blk00000022/sig000000a0 ),
-    .DI(\blk00000003/sig00000049 ),
-    .S(\blk00000003/blk00000022/sig000000a1 ),
-    .O(\blk00000003/blk00000022/sig000000a2 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000027  (
-    .I0(\blk00000003/sig00000012 ),
-    .I1(\blk00000003/sig00000049 ),
-    .O(\blk00000003/blk00000022/sig000000a1 )
-  );
-  XORCY   \blk00000003/blk00000022/blk00000026  (
-    .CI(\blk00000003/blk00000022/sig0000009e ),
-    .LI(\blk00000003/blk00000022/sig0000009f ),
-    .O(\blk00000003/sig0000004a )
-  );
-  MUXCY   \blk00000003/blk00000022/blk00000025  (
-    .CI(\blk00000003/blk00000022/sig0000009e ),
-    .DI(\blk00000003/sig0000004b ),
-    .S(\blk00000003/blk00000022/sig0000009f ),
-    .O(\blk00000003/blk00000022/sig000000a0 )
-  );
-  LUT2 #(
-    .INIT ( 4'h6 ))
-  \blk00000003/blk00000022/blk00000024  (
-    .I0(\blk00000003/sig00000012 ),
-    .I1(\blk00000003/sig0000004b ),
-    .O(\blk00000003/blk00000022/sig0000009f )
-  );
-  GND   \blk00000003/blk00000022/blk00000023  (
-    .G(\blk00000003/blk00000022/sig0000009e )
+    .ENA(sig00000002),
+    .ENB(sig00000002),
+    .RSTA(sig00000001),
+    .RSTB(sig00000001),
+    .REGCEA(sig00000002),
+    .REGCEB(sig00000002),
+    .ADDRA({sig00000001, sig00000001, sig00000001, sig0000002e, sig0000002d, sig0000002c, sig0000002b, sig0000002a, sig00000029, sig00000028, 
+sig00000026, \NLW_blk0000006a_ADDRA<2>_UNCONNECTED , \NLW_blk0000006a_ADDRA<1>_UNCONNECTED , \NLW_blk0000006a_ADDRA<0>_UNCONNECTED }),
+    .ADDRB({sig00000001, sig00000001, sig00000002, sig0000002e, sig0000002d, sig0000002c, sig0000002b, sig0000002a, sig00000029, sig00000028, 
+sig00000026, \NLW_blk0000006a_ADDRB<2>_UNCONNECTED , \NLW_blk0000006a_ADDRB<1>_UNCONNECTED , \NLW_blk0000006a_ADDRB<0>_UNCONNECTED }),
+    .DIA({\NLW_blk0000006a_DIA<31>_UNCONNECTED , \NLW_blk0000006a_DIA<30>_UNCONNECTED , \NLW_blk0000006a_DIA<29>_UNCONNECTED , 
+\NLW_blk0000006a_DIA<28>_UNCONNECTED , \NLW_blk0000006a_DIA<27>_UNCONNECTED , \NLW_blk0000006a_DIA<26>_UNCONNECTED , 
+\NLW_blk0000006a_DIA<25>_UNCONNECTED , \NLW_blk0000006a_DIA<24>_UNCONNECTED , \NLW_blk0000006a_DIA<23>_UNCONNECTED , 
+\NLW_blk0000006a_DIA<22>_UNCONNECTED , \NLW_blk0000006a_DIA<21>_UNCONNECTED , \NLW_blk0000006a_DIA<20>_UNCONNECTED , 
+\NLW_blk0000006a_DIA<19>_UNCONNECTED , \NLW_blk0000006a_DIA<18>_UNCONNECTED , \NLW_blk0000006a_DIA<17>_UNCONNECTED , 
+\NLW_blk0000006a_DIA<16>_UNCONNECTED , \NLW_blk0000006a_DIA<15>_UNCONNECTED , \NLW_blk0000006a_DIA<14>_UNCONNECTED , 
+\NLW_blk0000006a_DIA<13>_UNCONNECTED , \NLW_blk0000006a_DIA<12>_UNCONNECTED , \NLW_blk0000006a_DIA<11>_UNCONNECTED , 
+\NLW_blk0000006a_DIA<10>_UNCONNECTED , \NLW_blk0000006a_DIA<9>_UNCONNECTED , \NLW_blk0000006a_DIA<8>_UNCONNECTED , sig00000001, sig00000001, 
+sig00000001, sig00000001, sig00000001, sig00000001, sig00000001, sig00000001}),
+    .DIB({\NLW_blk0000006a_DIB<31>_UNCONNECTED , \NLW_blk0000006a_DIB<30>_UNCONNECTED , \NLW_blk0000006a_DIB<29>_UNCONNECTED , 
+\NLW_blk0000006a_DIB<28>_UNCONNECTED , \NLW_blk0000006a_DIB<27>_UNCONNECTED , \NLW_blk0000006a_DIB<26>_UNCONNECTED , 
+\NLW_blk0000006a_DIB<25>_UNCONNECTED , \NLW_blk0000006a_DIB<24>_UNCONNECTED , \NLW_blk0000006a_DIB<23>_UNCONNECTED , 
+\NLW_blk0000006a_DIB<22>_UNCONNECTED , \NLW_blk0000006a_DIB<21>_UNCONNECTED , \NLW_blk0000006a_DIB<20>_UNCONNECTED , 
+\NLW_blk0000006a_DIB<19>_UNCONNECTED , \NLW_blk0000006a_DIB<18>_UNCONNECTED , \NLW_blk0000006a_DIB<17>_UNCONNECTED , 
+\NLW_blk0000006a_DIB<16>_UNCONNECTED , \NLW_blk0000006a_DIB<15>_UNCONNECTED , \NLW_blk0000006a_DIB<14>_UNCONNECTED , 
+\NLW_blk0000006a_DIB<13>_UNCONNECTED , \NLW_blk0000006a_DIB<12>_UNCONNECTED , \NLW_blk0000006a_DIB<11>_UNCONNECTED , 
+\NLW_blk0000006a_DIB<10>_UNCONNECTED , \NLW_blk0000006a_DIB<9>_UNCONNECTED , \NLW_blk0000006a_DIB<8>_UNCONNECTED , 
+\NLW_blk0000006a_DIB<7>_UNCONNECTED , \NLW_blk0000006a_DIB<6>_UNCONNECTED , \NLW_blk0000006a_DIB<5>_UNCONNECTED , \NLW_blk0000006a_DIB<4>_UNCONNECTED 
+, \NLW_blk0000006a_DIB<3>_UNCONNECTED , \NLW_blk0000006a_DIB<2>_UNCONNECTED , \NLW_blk0000006a_DIB<1>_UNCONNECTED , 
+\NLW_blk0000006a_DIB<0>_UNCONNECTED }),
+    .DIPA({\NLW_blk0000006a_DIPA<3>_UNCONNECTED , \NLW_blk0000006a_DIPA<2>_UNCONNECTED , \NLW_blk0000006a_DIPA<1>_UNCONNECTED , sig00000001}),
+    .DIPB({\NLW_blk0000006a_DIPB<3>_UNCONNECTED , \NLW_blk0000006a_DIPB<2>_UNCONNECTED , \NLW_blk0000006a_DIPB<1>_UNCONNECTED , 
+\NLW_blk0000006a_DIPB<0>_UNCONNECTED }),
+    .WEA({sig00000001, sig00000001, sig00000001, sig00000001}),
+    .WEB({sig00000001, sig00000001, sig00000001, sig00000001}),
+    .DOA({\NLW_blk0000006a_DOA<31>_UNCONNECTED , \NLW_blk0000006a_DOA<30>_UNCONNECTED , \NLW_blk0000006a_DOA<29>_UNCONNECTED , 
+\NLW_blk0000006a_DOA<28>_UNCONNECTED , \NLW_blk0000006a_DOA<27>_UNCONNECTED , \NLW_blk0000006a_DOA<26>_UNCONNECTED , 
+\NLW_blk0000006a_DOA<25>_UNCONNECTED , \NLW_blk0000006a_DOA<24>_UNCONNECTED , \NLW_blk0000006a_DOA<23>_UNCONNECTED , 
+\NLW_blk0000006a_DOA<22>_UNCONNECTED , \NLW_blk0000006a_DOA<21>_UNCONNECTED , \NLW_blk0000006a_DOA<20>_UNCONNECTED , 
+\NLW_blk0000006a_DOA<19>_UNCONNECTED , \NLW_blk0000006a_DOA<18>_UNCONNECTED , \NLW_blk0000006a_DOA<17>_UNCONNECTED , 
+\NLW_blk0000006a_DOA<16>_UNCONNECTED , \NLW_blk0000006a_DOA<15>_UNCONNECTED , \NLW_blk0000006a_DOA<14>_UNCONNECTED , 
+\NLW_blk0000006a_DOA<13>_UNCONNECTED , \NLW_blk0000006a_DOA<12>_UNCONNECTED , \NLW_blk0000006a_DOA<11>_UNCONNECTED , 
+\NLW_blk0000006a_DOA<10>_UNCONNECTED , \NLW_blk0000006a_DOA<9>_UNCONNECTED , \NLW_blk0000006a_DOA<8>_UNCONNECTED , sine[7], sine[6], sine[5], sine[4]
+, sine[3], sine[2], sine[1], sine[0]}),
+    .DOB({\NLW_blk0000006a_DOB<31>_UNCONNECTED , \NLW_blk0000006a_DOB<30>_UNCONNECTED , \NLW_blk0000006a_DOB<29>_UNCONNECTED , 
+\NLW_blk0000006a_DOB<28>_UNCONNECTED , \NLW_blk0000006a_DOB<27>_UNCONNECTED , \NLW_blk0000006a_DOB<26>_UNCONNECTED , 
+\NLW_blk0000006a_DOB<25>_UNCONNECTED , \NLW_blk0000006a_DOB<24>_UNCONNECTED , \NLW_blk0000006a_DOB<23>_UNCONNECTED , 
+\NLW_blk0000006a_DOB<22>_UNCONNECTED , \NLW_blk0000006a_DOB<21>_UNCONNECTED , \NLW_blk0000006a_DOB<20>_UNCONNECTED , 
+\NLW_blk0000006a_DOB<19>_UNCONNECTED , \NLW_blk0000006a_DOB<18>_UNCONNECTED , \NLW_blk0000006a_DOB<17>_UNCONNECTED , 
+\NLW_blk0000006a_DOB<16>_UNCONNECTED , \NLW_blk0000006a_DOB<15>_UNCONNECTED , \NLW_blk0000006a_DOB<14>_UNCONNECTED , 
+\NLW_blk0000006a_DOB<13>_UNCONNECTED , \NLW_blk0000006a_DOB<12>_UNCONNECTED , \NLW_blk0000006a_DOB<11>_UNCONNECTED , 
+\NLW_blk0000006a_DOB<10>_UNCONNECTED , \NLW_blk0000006a_DOB<9>_UNCONNECTED , \NLW_blk0000006a_DOB<8>_UNCONNECTED , cosine[7], cosine[6], cosine[5], 
+cosine[4], cosine[3], cosine[2], cosine[1], cosine[0]}),
+    .DOPA({\NLW_blk0000006a_DOPA<3>_UNCONNECTED , \NLW_blk0000006a_DOPA<2>_UNCONNECTED , \NLW_blk0000006a_DOPA<1>_UNCONNECTED , 
+\NLW_blk0000006a_DOPA<0>_UNCONNECTED }),
+    .DOPB({\NLW_blk0000006a_DOPB<3>_UNCONNECTED , \NLW_blk0000006a_DOPB<2>_UNCONNECTED , \NLW_blk0000006a_DOPB<1>_UNCONNECTED , 
+\NLW_blk0000006a_DOPB<0>_UNCONNECTED })
   );
 
 // synthesis translate_on
